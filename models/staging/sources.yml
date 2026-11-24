@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: crmuser
+    description: "Raw core banking source tables in the bronze schema"
+    schema: bronze
+    tables:
+      - name: account
+        description: "Core banking account master records including account numbers, scheme/product codes, balances, limits, lien amounts, interest rates, and account status"
+      - name: customer
+        description: "Customer profile and CIF master records including names, PAN, risk rating, contact details, segmentation, and relationship dates"
+      - name: branch
+        description: "Bank branch reference master containing branch SOL IDs, branch codes, locations, addresses, provinces/states, and opening dates"
+      - name: transactions
+        description: "Financial transaction ledger entries including transaction keys, posting dates, debit/credit indicators, amounts, channels, and balances"
+      - name: lien
+        description: "Account lien records tracking hold/lien amounts, reason codes, start and expiry dates, requesting departments, and lien status"
+      - name: ratelist
+        description: "Currency exchange rate list and slab records across fixed/variable currencies, rate codes, and effective dates"
+      - name: product
+        description: "Banking product catalog defining scheme types, scheme codes, product descriptions, and creation/modification timestamps"
